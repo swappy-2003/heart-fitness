@@ -163,9 +163,10 @@ export default function Footer() {
               <button
                 onClick={scrollToTop}
                 aria-label="Scroll back to top"
-                className="border border-white/20 hover:border-white text-xs font-mono text-white/70 hover:text-white px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 cursor-pointer hover:bg-white/5"
+                style={{ backgroundColor: '#FFD21A' }}
+                className="bg-[#FFD21A] text-black hover:bg-white text-xs font-mono font-bold px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 cursor-pointer shadow-[0_2px_14px_rgba(255,210,26,0.35)] hover:scale-105"
               >
-                <span>↑</span>
+                <span className="font-bold">↑</span>
                 <span>TOP</span>
               </button>
             </div>
