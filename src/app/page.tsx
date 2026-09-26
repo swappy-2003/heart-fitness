@@ -9,6 +9,7 @@ import Services from '@/components/sections/Services';
 import Facilities from '@/components/sections/Facilities';
 import Trainers from '@/components/sections/Trainers';
 import Reviews from '@/components/sections/Reviews';
+import VideoTestimonials from '@/components/sections/VideoTestimonials';
 import Location from '@/components/sections/Location';
 import Footer from '@/components/Footer';
 
@@ -30,6 +31,7 @@ export default function Home() {
           <Facilities />
           <Trainers />
           <Reviews />
+          <VideoTestimonials />
           <Location />
         </main>
         <Footer />

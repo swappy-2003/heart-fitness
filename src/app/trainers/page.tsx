@@ -12,31 +12,24 @@ export const metadata: Metadata = {
 
 const trainerRoles = [
   {
+    name: 'PRATHAMESH GAWARE',
     title: 'HEAD STRENGTH & BIOMECHANICS COACH',
     credential: 'Certified Strength & Conditioning Specialist',
     focus: 'Kinetic bar path, compound lift optimization, joint-safe progressive overload',
-    image: '/images/strength.jpg',
+    image: '/images/prathamesh gaware trainer.png',
     philosophy:
       'Lifting heavy weights is an exact science. By matching the barbell path to individual limb lengths and bone structure, lifters can progressively build tremendous strength without chronic back or knee pain.',
-    tags: ['Barbell Biomechanics', 'Spine & Joint Health', 'Hypertrophy Periodization'],
+    tags: ['Barbell Biomechanics', 'Spine & Joint Health', 'Hypertrophy Periodization', 'Jerai Lever Mastery'],
   },
   {
-    title: 'CARDIOVASCULAR & CONDITIONING SPECIALIST',
-    credential: 'Certified Metabolic Conditioning Coach',
-    focus: 'Aerobic threshold training, functional interval circuits, body recomposition',
-    image: '/images/hero.jpg',
+    name: 'MAHI',
+    title: 'FUNCTIONAL MOVEMENT & CONDITIONING COACH',
+    credential: 'Certified Functional Movement & Conditioning Coach',
+    focus: 'Aerobic threshold training, functional interval circuits, kinetic agility complexes',
+    image: '/images/mahi trainer.png',
     philosophy:
-      'Conditioning is about vascular durability and recovery rate. We measure pacing and heart rate recovery to build an athletic engine capable of sustained output.',
-    tags: ['Heart Rate Pacing', 'Metabolic Efficiency', 'Fat Loss Recomposition'],
-  },
-  {
-    title: 'FUNCTIONAL MOVEMENT & MOBILITY INSTRUCTOR',
-    credential: 'Certified Functional Movement Specialist',
-    focus: 'Hip/shoulder decompression, active flexibility, kinetic agility complexes',
-    image: '/images/strength.jpg',
-    philosophy:
-      'True fitness allows you to move freely in any plane of motion. Our mobility sequences restore natural rotational power and eliminate the tightness caused by daily sitting.',
-    tags: ['Thoracic Decompression', 'Rotational Agility', 'Athletic Longevity'],
+      'True fitness allows you to move freely in any plane of motion. Our metabolic and mobility sequences restore natural rotational power, stamina, and athletic durability.',
+    tags: ['Functional Movement', 'Metabolic Conditioning', 'Thoracic Decompression', 'Athletic Durability'],
   },
 ];
 
@@ -71,30 +64,21 @@ export default function TrainersPage() {
           <div className="container-wide space-y-24">
             {trainerRoles.map((coach, index) => (
               <div
-                key={coach.title}
+                key={coach.name}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start border-b border-[var(--border-subtle)] pb-20 last:border-b-0"
               >
                 {/* Visual */}
-                <div className="lg:col-span-5 relative w-full h-[400px] border border-[var(--border-subtle)] overflow-hidden group">
+                <div className="lg:col-span-5 relative w-full aspect-[2/3] max-w-md mx-auto lg:max-w-none border border-[var(--border-subtle)] overflow-hidden group bg-[#FAF9F6] shadow-xs">
                   <Image
                     src={coach.image}
-                    alt={coach.title}
+                    alt={`${coach.name} - ${coach.title}`}
                     fill
-                    className="object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
+                    className="object-contain object-center transition-transform duration-700 group-hover:scale-[1.02]"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/30" />
-                  <div className="absolute top-4 left-4">
-                    <span className="label-micro px-2.5 py-1 bg-[var(--bg-primary)] text-[var(--accent-yellow)] border border-[var(--border-subtle)] font-mono">
+                  <div className="absolute top-3 left-3">
+                    <span className="label-micro px-2.5 py-1 bg-white/95 text-[#121212] border border-black/10 font-mono shadow-xs">
                       CADRE 0{index + 1}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                    <span className="label-micro text-[var(--text-primary)] bg-black/80 px-2 py-1">
-                      VIRAR EAST
-                    </span>
-                    <span className="label-micro text-[var(--accent-yellow)]">
-                      VERIFIED
                     </span>
                   </div>
                 </div>
@@ -102,9 +86,15 @@ export default function TrainersPage() {
                 {/* Details */}
                 <div className="lg:col-span-7 flex flex-col justify-between">
                   <div>
-                    <span className="label-micro text-[var(--accent-yellow)] block mb-2 font-mono">
-                      {coach.credential}
-                    </span>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-sm font-mono font-bold text-[var(--accent-yellow)] tracking-widest uppercase">
+                        {coach.name}
+                      </span>
+                      <span className="text-xs text-[var(--text-muted)]">•</span>
+                      <span className="label-micro text-[var(--text-muted)] font-mono">
+                        {coach.credential}
+                      </span>
+                    </div>
                     <h2 className="heading-sub font-bold text-[var(--text-primary)] mb-4">
                       {coach.title}
                     </h2>

@@ -11,21 +11,17 @@ gsap.registerPlugin(ScrollTrigger);
 const trainersList = [
   {
     number: '01',
-    role: 'Strength & Biomechanics',
-    focus: 'Barbell Hypertrophy • Jerai Lever Systems',
-    image: '/images/strength.jpg',
+    name: 'Prathamesh Gaware',
+    role: 'Head Strength & Biomechanics Coach',
+    focus: 'Barbell Hypertrophy • Jerai Lever Systems • Compound Lifts',
+    image: '/images/prathamesh gaware trainer.png',
   },
   {
     number: '02',
-    role: 'Conditioning & High-Intensity',
-    focus: 'CrossFit Rig • Metabolic Intervals',
-    image: '/images/hero.jpg',
-  },
-  {
-    number: '03',
-    role: 'Functional & Mobility',
-    focus: 'Joint Health • Athletic Longevity',
-    image: '/images/strength.jpg',
+    name: 'Mahi',
+    role: 'Functional & Conditioning Specialist',
+    focus: 'Metabolic Conditioning • Joint Health • Athletic Longevity',
+    image: '/images/mahi trainer.png',
   },
 ];
 
@@ -62,8 +58,8 @@ export default function Trainers() {
       aria-label="Coaching Staff"
     >
       <div className="container-wide">
-        {/* Minimal Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 sm:mb-20">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
             <span className="text-xs font-mono tracking-[0.25em] text-[var(--text-muted)] uppercase block mb-3">
               COACHING CADRE
@@ -85,37 +81,42 @@ export default function Trainers() {
           </Link>
         </div>
 
-        {/* Clean Editorial 3-Column Visual Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        {/* Clean Editorial 2-Column Compact Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 max-w-3xl mx-auto items-start">
           {trainersList.map((item) => (
             <div
               key={item.number}
-              className="group cursor-pointer"
+              className="group cursor-pointer flex flex-col items-center"
             >
-              {/* Photo Frame */}
-              <div className="relative w-full h-[380px] sm:h-[440px] overflow-hidden bg-[var(--bg-secondary)] border border-[var(--border-subtle)] mb-5">
-                <Image
-                  src={item.image}
-                  alt={item.role}
-                  fill
-                  className="object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="text-xs font-mono font-bold px-2.5 py-1 bg-white text-[#121212] shadow-sm">
-                    {item.number}
-                  </span>
+              <div className="w-full max-w-[240px] sm:max-w-[270px] lg:max-w-[285px]">
+                {/* Photo Frame - Exact 2:3 aspect ratio */}
+                <div className="relative w-full aspect-[2/3] overflow-hidden bg-[#FAF9F6] border border-[var(--border-subtle)] mb-3.5 shadow-xs">
+                  <Image
+                    src={item.image}
+                    alt={`${item.name} - ${item.role}`}
+                    fill
+                    className="object-contain object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 240px, (max-width: 1024px) 270px, 285px"
+                  />
+                  <div className="absolute top-2.5 left-2.5">
+                    <span className="text-[11px] font-mono font-bold px-2 py-0.5 bg-white/95 text-[#121212] border border-black/10 shadow-xs">
+                      {item.number}
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Minimal Meta */}
-              <div className="flex flex-col gap-1">
-                <h3 className="text-base sm:text-lg font-bold uppercase tracking-tight text-[var(--text-primary)] group-hover:text-[var(--accent-yellow)] transition-colors">
-                  {item.role}
-                </h3>
-                <p className="text-xs font-mono text-[var(--text-muted)] tracking-wider">
-                  {item.focus}
-                </p>
+                {/* Meta: Name & Captions */}
+                <div className="flex flex-col gap-1 text-left">
+                  <span className="text-xs font-mono text-[var(--accent-yellow)] font-bold tracking-widest uppercase">
+                    {item.name}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-bold uppercase tracking-tight text-[var(--text-primary)] group-hover:text-[var(--accent-yellow)] transition-colors leading-snug">
+                    {item.role}
+                  </h3>
+                  <p className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider leading-relaxed">
+                    {item.focus}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
