@@ -70,8 +70,11 @@ export default function Hero() {
           sizes="100vw"
         />
 
-        {/* Soft directional gradient: shields text on left, leaves the illuminated sign & gym floor 100% visible on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(250,249,246,0.95)] via-[rgba(250,249,246,0.75)] via-30% md:via-[rgba(250,249,246,0.25)] md:via-55% to-transparent to-80%" />
+        {/* Directional gradient shield: solid high-contrast ground on the text zone (left), smoothly revealing the illuminated sign & gym floor on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/95 via-35% md:via-[#FAF9F6]/85 md:via-50% lg:via-[#FAF9F6]/40 lg:via-68% to-transparent" />
+
+        {/* Soft radial backdrop directly behind text column for flawless legibility */}
+        <div className="absolute -left-10 top-1/4 w-[600px] h-[500px] bg-[#FAF9F6]/75 rounded-full blur-3xl pointer-events-none" />
 
         {/* Delicate bottom blend into next section */}
         <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[var(--bg-primary)] via-[rgba(250,249,246,0.5)] to-transparent" />
@@ -80,25 +83,27 @@ export default function Hero() {
       {/* Main Content Area */}
       <div className="container-wide relative z-10 flex-1 flex flex-col justify-center py-12 sm:py-16">
         <div className="max-w-2xl">
-          {/* Minimal Location Marker */}
-          <div className="inline-flex items-center gap-2.5 mb-6 sm:mb-8 text-xs font-mono tracking-[0.2em] text-[var(--text-muted)] uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-yellow)]" />
-            <span>VIRAR EAST • OPP. MANVELPADA TALAV</span>
+          {/* Location Marker Badge with crisp contrast */}
+          <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-white/90 border border-black/10 backdrop-blur-md mb-6 sm:mb-8 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#E5B800]" />
+            <span className="text-[11px] font-mono tracking-[0.2em] text-[#121212] font-semibold uppercase">
+              Virar East • Opp. Manvelpada Talav
+            </span>
           </div>
 
           {/* Giant Editorial Headline */}
           <h1
             ref={headlineRef}
-            className="heading-hero text-[var(--text-primary)] mb-6 sm:mb-8 tracking-tighter"
+            className="heading-hero text-[#121212] mb-6 sm:mb-8 tracking-tighter"
           >
             TRAIN<br />
-            <span className="text-[var(--accent-yellow)]">STRONGER.</span>
+            <span className="text-[#D4A000]">STRONGER.</span>
           </h1>
 
-          {/* De-bloated Human Subtitle */}
+          {/* Human Subtitle with bold, crystal-clear readability */}
           <p
             ref={subtitleRef}
-            className="body-large text-[var(--text-secondary)] max-w-lg mb-8 sm:mb-10 font-light leading-relaxed"
+            className="body-large text-[#1E1E1E] max-w-lg mb-8 sm:mb-10 font-normal leading-relaxed"
           >
             Virar East&apos;s dedicated strength and conditioning facility. Commercial Jerai apparatus, certified coaching, and lakefront recovery.
           </p>
