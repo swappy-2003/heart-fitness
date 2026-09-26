@@ -32,18 +32,27 @@ export default function FloatingActions() {
       <button
         onClick={scrollToTop}
         aria-label="Scroll back to top"
-        className={`group relative pointer-events-auto flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#121212]/90 backdrop-blur-md border border-white/20 text-white shadow-xl hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer ${
+        className={`group relative pointer-events-auto flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#121212] border border-black/10 shadow-[0_4px_22px_rgba(0,0,0,0.2)] hover:bg-[#FFD21A] hover:border-[#FFD21A] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer ${
           showTop
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-3 pointer-events-none'
         }`}
       >
-        <span className="text-base sm:text-lg transition-transform duration-300 group-hover:-translate-y-0.5">
-          ↑
-        </span>
+        <svg
+          className="w-5 h-5 text-[#121212] transition-transform duration-300 group-hover:-translate-y-0.5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
 
         {/* Hover Tooltip */}
-        <span className="absolute right-full mr-3 px-2.5 py-1 rounded bg-black/90 text-white text-[11px] font-mono tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg border border-white/10 hidden sm:block">
+        <span className="absolute right-full mr-3 px-2.5 py-1 rounded bg-black/95 text-white text-[11px] font-mono tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg border border-white/10 hidden sm:block">
           Top
         </span>
       </button>
@@ -60,11 +69,24 @@ export default function FloatingActions() {
       >
         {/* WhatsApp Icon */}
         <svg
-          className="w-6 h-6 sm:w-7 sm:h-7 fill-current"
+          className="w-7 h-7 sm:w-8 sm:h-8"
           viewBox="0 0 24 24"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
-          <path d="M12.031 2C6.516 2 2.03 6.484 2.03 12c0 1.954.563 3.781 1.531 5.344L2.03 22l4.813-1.484A9.914 9.914 0 0 0 12.03 22c5.516 0 10-4.484 10-10 0-5.516-4.484-10-10-10zm0 1.844c4.516 0 8.156 3.64 8.156 8.156 0 4.516-3.64 8.156-8.156 8.156a8.082 8.082 0 0 1-4.281-1.219l-.313-.187-2.844.89.906-2.765-.2-.328A8.077 8.077 0 0 1 3.875 12c0-4.516 3.64-8.156 8.156-8.156zm-3.563 4.25c-.218 0-.468.031-.671.265-.204.235-.8 0.782-.8 1.907s.812 2.218.937 2.375c.125.156 1.563 2.453 3.828 3.344 1.89.75 2.281.609 2.688.562.406-.046 1.312-.531 1.5-.1.047.187-.516.187-.953 0-.156-.094-.313-.313-.531-.219-.219-1.297-.64-1.516-.75-.219-.109-.375-.156-.531.156-.156.313-.609.75-.75.907-.14.156-.281.171-.5.062-.219-.109-.922-.344-1.75-1.078-.64-.578-1.078-1.297-1.203-1.516-.125-.218-.016-.343.094-.453.11-.11.234-.281.344-.422.11-.14.156-.234.234-.39.078-.157.031-.297-.015-.407-.047-.11-.5-.1.219-1.375-1.688-.125-.156-.25-.156-.469-.156z" />
+          {/* White Speech Bubble */}
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.95l4.908-1.287A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"
+            fill="#FFFFFF"
+          />
+          {/* WhatsApp Green Phone Receiver */}
+          <path
+            d="M17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.09-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.25-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.23-.55-.46-.47-.63-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.34s1 2.71 1.14 2.9c.14.19 1.97 3.01 4.77 4.22.67.29 1.19.46 1.59.59.67.21 1.28.18 1.76.11.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33z"
+            fill="#25D366"
+          />
         </svg>
 
         {/* Pulsing Emerald Dot */}
