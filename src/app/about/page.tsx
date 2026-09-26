@@ -80,8 +80,8 @@ export default function AboutPage() {
               <div className="lg:col-span-5 space-y-8">
                 <div className="relative w-full h-[400px] border border-[var(--border-subtle)] overflow-hidden">
                   <Image
-                    src="/images/hero.jpg"
-                    alt="Heart Fitness interior"
+                    src="/images/facilities/facility_main_floor.png"
+                    alt="Heart Fitness interior and main training floor"
                     fill
                     className="object-cover grayscale contrast-125"
                     sizes="(max-width: 1024px) 100vw, 40vw"

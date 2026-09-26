@@ -98,15 +98,15 @@ export default function Intro() {
           <div className="lg:col-span-6">
             <div className="relative w-full h-[320px] sm:h-[380px] overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-secondary)] group">
               <Image
-                src="/images/strength.jpg"
-                alt="Strength deck at Heart Fitness Virar East"
+                src="/images/facilities/facility_main_floor.png"
+                alt="Main gym training floor at Heart Fitness Virar East"
                 fill
                 className="object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs font-mono text-white/90">
-                <span className="tracking-widest uppercase">JERAI STRENGTH DECK</span>
+                <span className="tracking-widest uppercase">MAIN TRAINING FLOOR</span>
                 <span className="text-[var(--accent-yellow-bright)]">VIRAR EAST</span>
               </div>
             </div>

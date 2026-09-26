@@ -80,29 +80,29 @@ export default function Community() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div className="relative h-[280px] sm:h-[340px] overflow-hidden group border border-[var(--border-subtle)] bg-white shadow-sm">
             <Image
-              src="/images/strength.jpg"
-              alt="Training floor at Heart Fitness"
+              src="/images/facilities/facility_olympic_deadlift.png"
+              alt="Olympic deadlift and leg press station at Heart Fitness"
               fill
               className="object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
               sizes="(max-width: 768px) 50vw, 25vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
             <span className="absolute bottom-3 left-3 text-xs font-mono font-semibold text-white">
-              #TRAINING
+              #DEADLIFT_ZONE
             </span>
           </div>
 
           <div className="relative h-[280px] sm:h-[340px] overflow-hidden group border border-[var(--border-subtle)] bg-white shadow-sm">
             <Image
-              src="/images/hero.jpg"
-              alt="Gym floor at Heart Fitness"
+              src="/images/facilities/facility_selectorized_legs.png"
+              alt="Selectorized biomechanics machines at Heart Fitness"
               fill
               className="object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
               sizes="(max-width: 768px) 50vw, 25vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
             <span className="absolute bottom-3 left-3 text-xs font-mono font-semibold text-white">
-              #FLOOR
+              #BIOMECHANICS
             </span>
           </div>
 
@@ -121,15 +121,15 @@ export default function Community() {
 
           <div className="relative h-[280px] sm:h-[340px] overflow-hidden group border border-[var(--border-subtle)] bg-white shadow-sm">
             <Image
-              src="/images/strength.jpg"
-              alt="Jerai equipment at Heart Fitness"
+              src="/images/facilities/facility_belt_squat.png"
+              alt="Jerai Belt squat and functional setup at Heart Fitness"
               fill
               className="object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
               sizes="(max-width: 768px) 50vw, 25vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
             <span className="absolute bottom-3 left-3 text-xs font-mono font-semibold text-white">
-              #VIRAR_EAST
+              #BELT_SQUAT
             </span>
           </div>
         </div>

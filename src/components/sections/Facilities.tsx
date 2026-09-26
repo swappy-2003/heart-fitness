@@ -17,27 +17,34 @@ const facilityThumbnails: FacilityThumbnail[] = [
     id: 'reception',
     number: '01',
     title: 'WELCOME LOUNGE & DESK',
-    subtitle: 'Front Desk • Nutrition Bar • Assessment Station',
-    image: '/images/herosection.png',
+    subtitle: 'Front Desk • Intake Lounge • Member Check-In',
+    image: '/images/facilities/facility_reception.png',
   },
   {
     id: 'strength',
     number: '02',
-    title: 'FREE WEIGHTS & DUMBBELL ARENA',
-    subtitle: 'Jerai Power Racks • Olympic Benches • Dumbbells to 40kg',
-    image: '/images/strength.jpg',
+    title: 'JERAI POWER RACKS',
+    subtitle: 'Olympic Racks • Wooden Platforms • Bumper Plates',
+    image: '/images/facilities/facility_power_rack.png',
   },
   {
-    id: 'cardio-turf',
+    id: 'cardio',
     number: '03',
-    title: 'FUNCTIONAL TURF & CARDIO DECK',
-    subtitle: 'Lakeview Treadmills • CrossFit Rig • Conditioning Lane',
-    image: '/images/hero.jpg',
+    title: 'LAKEVIEW CARDIO DECK',
+    subtitle: 'Commercial Treadmills • Natural Light • Lake View',
+    image: '/images/facilities/facility_cardio_treadmills.png',
+  },
+  {
+    id: 'spin-cables',
+    number: '04',
+    title: 'SPIN & CABLE ARENA',
+    subtitle: 'Spin Studio • Cable Crossover Towers • Cross LEDs',
+    image: '/images/facilities/facility_spin_cardio.png',
   },
 ];
 
 export default function Facilities() {
-  const [activeImage, setActiveImage] = useState<string>('/images/facility_hero.jpg');
+  const [activeImage, setActiveImage] = useState<string>('/images/facilities/facility_main_floor.png');
   const [activeNumber, setActiveNumber] = useState<string>('00');
 
   const handleSelectThumbnail = (img: string, num: string) => {
@@ -115,16 +122,16 @@ export default function Facilities() {
         </div>
 
         {/* ========================================================
-            BOTTOM: 3-CARD INTERACTIVE GRID
+            BOTTOM: 4-CARD INTERACTIVE GRID
         ======================================================== */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-3 sm:mt-4">
           {facilityThumbnails.map((item) => {
             const isSelected = activeImage === item.image;
             return (
               <div
                 key={item.id}
                 onClick={() => handleSelectThumbnail(item.image, item.number)}
-                className={`relative h-[200px] sm:h-[230px] lg:h-[260px] overflow-hidden group cursor-pointer border transition-all duration-300 ${
+                className={`relative h-[180px] sm:h-[220px] lg:h-[250px] overflow-hidden group cursor-pointer border transition-all duration-300 ${
                   isSelected
                     ? 'border-white/80 ring-1 ring-white/60 shadow-[0_0_20px_rgba(255,255,255,0.15)]'
                     : 'border-white/10 hover:border-white/40'
@@ -144,7 +151,7 @@ export default function Facilities() {
                   alt={item.title}
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
 
                 {/* Ambient Dark Gradient for Legibility */}

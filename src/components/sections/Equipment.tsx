@@ -72,8 +72,8 @@ export default function Equipment() {
           data-cursor="JERAI"
         >
           <Image
-            src="/images/strength.jpg"
-            alt="Jerai strength equipment at Heart Fitness Virar East"
+            src="/images/facilities/facility_power_rack.png"
+            alt="Jerai strength equipment and power rack at Heart Fitness Virar East"
             fill
             className="object-cover grayscale contrast-125 transition-transform duration-1000 group-hover:scale-105"
             sizes="100vw"
