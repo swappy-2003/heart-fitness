@@ -32,14 +32,15 @@ export default function FloatingActions() {
       <button
         onClick={scrollToTop}
         aria-label="Scroll back to top"
-        className={`group relative pointer-events-auto flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#121212] border border-black/10 shadow-[0_4px_22px_rgba(0,0,0,0.2)] hover:bg-[#FFD21A] hover:border-[#FFD21A] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer ${
+        style={{ backgroundColor: '#FFD21A' }}
+        className={`group relative pointer-events-auto flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full !bg-[#FFD21A] text-black border border-black/15 shadow-[0_4px_22px_rgba(255,210,26,0.45)] hover:!bg-[#121212] hover:text-[#FFD21A] hover:border-black hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer ${
           showTop
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-3 pointer-events-none'
         }`}
       >
         <svg
-          className="w-5 h-5 text-[#121212] transition-transform duration-300 group-hover:-translate-y-0.5"
+          className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
