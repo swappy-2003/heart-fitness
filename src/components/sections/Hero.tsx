@@ -173,8 +173,6 @@ export default function Hero({ onIntroActiveChange }: HeroProps) {
           src="/images/herovideo.mp4"
           autoPlay
           playsInline
-          // @ts-expect-error webkit-playsinline for legacy iOS Safari
-          webkit-playsinline="true"
           muted={isMobileIntro ? isMuted : true}
           loop={!isMobileIntro}
           onTimeUpdate={handleTimeUpdate}
