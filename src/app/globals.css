@@ -58,6 +58,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: auto; /* Lenis handles smooth scroll */
+    overflow-x: hidden;
   }
 
   html.lenis,
@@ -371,7 +372,8 @@
   }
 
   .heading-hero {
-    font-size: clamp(2.75rem, 13vw, 5rem);
+    font-size: clamp(1.8rem, 8.2vw, 4.25rem);
+    overflow-wrap: break-word;
   }
 
   .heading-section {
