@@ -11,6 +11,18 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
+    // If first-time mobile visitor, skip this loader so they see only the video intro
+    if (typeof window !== 'undefined') {
+      const isMobile = window.innerWidth < 768;
+      const hasSeenIntro = localStorage.getItem('hf_mobile_intro_seen');
+      const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
+      if (isMobile && (!hasSeenIntro || forceIntro)) {
+        setShow(false);
+        onComplete();
+        return;
+      }
+    }
+
     // Only play once per session
     if (typeof window !== 'undefined' && sessionStorage.getItem('hf_loaded')) {
       const timer = setTimeout(() => {
