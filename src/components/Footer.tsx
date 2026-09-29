@@ -177,10 +177,36 @@ export default function Footer() {
         {/* ========================================================
             SUB-FOOTER BAR
         ======================================================== */}
-        <div className="border-t border-white/[0.08] pt-8 mt-16 sm:mt-20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/40">
+        <div className="border-t border-white/[0.08] pt-8 mt-16 sm:mt-20 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-white/40">
           <div>
             © {currentYear} Heart Fitness. All rights reserved.
           </div>
+
+          {/* Built with 99Labs Badge */}
+          <a
+            href="https://99labs.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Built with love by 99Labs"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/30 text-white/90 hover:text-white transition-all duration-300 font-sans text-xs tracking-normal shadow-sm group hover:scale-[1.02]"
+          >
+            <span>Built with</span>
+            <svg
+              className="w-3.5 h-3.5 text-[#ff4b72] fill-[#ff4b72]/20 group-hover:scale-110 group-hover:fill-[#ff4b72] transition-all duration-300"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+            <span>by</span>
+            <span className="font-semibold bg-gradient-to-r from-[#00b4d8] to-[#2dd4bf] bg-clip-text text-transparent">
+              99Labs
+            </span>
+          </a>
+
           <div>
             Virar East, Maharashtra • 19.4678° N, 72.8258° E
           </div>
