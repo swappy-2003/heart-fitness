@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     siteName: 'Heart Fitness Virar',
     images: [
       {
-        url: '/images/herosection.png',
-        width: 1672,
-        height: 941,
-        alt: 'Heart Fitness Gym Interior Virar East',
+        url: '/images/heart-fitness-social-card.png',
+        width: 1200,
+        height: 630,
+        alt: 'Heart Fitness — Train strong. Live healthy.',
       },
     ],
     locale: 'en_IN',
@@ -52,7 +52,14 @@ export const metadata: Metadata = {
     title: 'Heart Fitness | Elite Training Ground in Virar East',
     description:
       'Train stronger with commercial Jerai equipment and certified coaches at M Baria Estate, Virar East.',
-    images: ['/images/herosection.png'],
+    images: [
+      {
+        url: '/images/heart-fitness-social-card.png',
+        width: 1200,
+        height: 630,
+        alt: 'Heart Fitness — Train strong. Live healthy.',
+      },
+    ],
   },
   robots: {
     index: true,
