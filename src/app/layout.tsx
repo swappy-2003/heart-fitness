@@ -38,10 +38,11 @@ export const metadata: Metadata = {
     siteName: 'Heart Fitness Virar',
     images: [
       {
-        url: '/images/heart-fitness-social-card.png',
+        url: '/images/heart-fitness-social-card.jpg',
         width: 1200,
         height: 630,
         alt: 'Heart Fitness — Train strong. Live healthy.',
+        type: 'image/jpeg',
       },
     ],
     locale: 'en_IN',
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
       'Train stronger with commercial Jerai equipment and certified coaches at M Baria Estate, Virar East.',
     images: [
       {
-        url: '/images/heart-fitness-social-card.png',
+        url: '/images/heart-fitness-social-card.jpg',
         width: 1200,
         height: 630,
         alt: 'Heart Fitness — Train strong. Live healthy.',
