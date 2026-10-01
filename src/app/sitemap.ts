@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://heartfitnessvirar.in';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://heartfitness.netlify.app';
   const currentDate = new Date();
 
   const routes = ['', '/about', '/facilities', '/programs', '/trainers', '/contact'];

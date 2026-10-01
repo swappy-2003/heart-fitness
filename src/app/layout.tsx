@@ -10,6 +10,8 @@ const inter = Inter({
   display: 'swap',
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://heartfitness.netlify.app';
+
 export const metadata: Metadata = {
   title: 'Heart Fitness | Elite Fitness Club & Gym in Virar East, Maharashtra',
   description:
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     'steam room gym Virar East',
   ],
   authors: [{ name: 'Heart Fitness' }],
-  metadataBase: new URL('https://heartfitnessvirar.in'),
+  metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
   },
@@ -34,11 +36,12 @@ export const metadata: Metadata = {
     title: 'Heart Fitness | Elite Training Ground in Virar East',
     description:
       'A quiet, focused athletic sanctuary in Virar East. Built around strength, movement, Jerai equipment, and certified coaching.',
-    url: 'https://heartfitnessvirar.in',
+    url: siteUrl,
     siteName: 'Heart Fitness Virar',
     images: [
       {
-        url: '/images/heart-fitness-social-card.jpg',
+        url: `${siteUrl}/images/heart-fitness-social-card.jpg`,
+        secureUrl: `${siteUrl}/images/heart-fitness-social-card.jpg`,
         width: 1200,
         height: 630,
         alt: 'Heart Fitness — Train strong. Live healthy.',
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
       'Train stronger with commercial Jerai equipment and certified coaches at M Baria Estate, Virar East.',
     images: [
       {
-        url: '/images/heart-fitness-social-card.jpg',
+        url: `${siteUrl}/images/heart-fitness-social-card.jpg`,
         width: 1200,
         height: 630,
         alt: 'Heart Fitness — Train strong. Live healthy.',
@@ -82,10 +85,10 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ExerciseGym',
   name: 'Heart Fitness',
-  image: 'https://heartfitnessvirar.in/images/herosection.png',
+  image: `${siteUrl}/images/herosection.png`,
   telephone: '+917841966244',
   email: 'heartfitness322@gmail.com',
-  url: 'https://heartfitnessvirar.in',
+  url: siteUrl,
   address: {
     '@type': 'PostalAddress',
     streetAddress: '2nd Floor, M Baria Estate, Opposite Manvelpada Talav',
